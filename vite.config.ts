@@ -32,7 +32,7 @@ export default defineConfig({
       },
       output: {
         entryFileNames: "src/pages/[name]/index.js",
-        chunkFileNames: "assets/js/[name].[hash].js",
+        chunkFileNames: "assets/js/[name].js",
         assetFileNames: (assetInfo) => {
           const { dir, name: _name } = path.parse(assetInfo.name);
           const assetFolder = getLastElement(dir.split("/"));
